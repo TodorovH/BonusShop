@@ -1,0 +1,11 @@
+{
+  "home": {},
+  "common": {
+    "login": "Login",
+    "home": "Home",
+    "bonusshop": "Bonus Shop",
+    "deposit": "Deposit",
+    "en": "EN",
+    "ar": "AR"
+  }
+}

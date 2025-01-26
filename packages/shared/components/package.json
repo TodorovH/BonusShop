@@ -1,0 +1,35 @@
+{
+  "name": "@repo/components",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    "./deposit-form": "./src/deposit-form.tsx",
+    "./bonus-list": "./src/bonus-list.tsx",
+    "./bonus-card": "./src/bonus-card.tsx",
+    "./menu": "./src/menu.tsx",
+    "./linkbutton": "./src/linkbutton.tsx",
+    "./loginbutton": "./src/loginbutton.tsx",
+    "./navbar": "./src/navbar.tsx",
+    "./footer": "./src/footer.tsx",
+    "./header": "./src/header.tsx",
+    "./button": "./src/button.tsx"
+  },
+  "scripts": {
+    "lint": "eslint . --max-warnings 0",
+    "generate:component": "turbo gen react-component",
+    "check-types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@turbo/gen": "^1.12.4",
+    "@types/node": "^20.11.24",
+    "@types/react": "18.3.0",
+    "@types/react-dom": "18.3.1",
+    "typescript": "5.5.4"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
