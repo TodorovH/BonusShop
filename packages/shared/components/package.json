@@ -4,6 +4,7 @@
   "private": true,
   "exports": {
     "./deposit-form": "./src/deposit-form.tsx",
+    "./login-form": "./src/login-form.tsx",
     "./bonus-list": "./src/bonus-list.tsx",
     "./bonus-card": "./src/bonus-card.tsx",
     "./menu": "./src/menu.tsx",

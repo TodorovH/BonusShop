@@ -19,21 +19,29 @@ const authOptions: NextAuthOptions = {
   providers: [
     CredentialsProvider({
       type: 'credentials',
-      credentials: {},
+      credentials: {
+        // username: {
+        //   label: 'Username',
+        //   type: 'text',
+        //   placeholder: 'Write your name here...',
+        // },
+      },
       authorize(credentials, req) {
         const { username } = credentials as {
           username: string;
         };
-        return (
-          getUsers().find(
-            (user: { username: string }) => user.username === username
-          ) || null
+        console.log(username);
+        const user = getUsers().find(
+          (user: { username: string }) => user.username === username
         );
+        console.log(user);
+        if (!user) return null;
+        return user;
       },
     }),
   ],
   pages: {
-    signIn: '/auth/signin',
+    signIn: '/login',
   },
 };
 

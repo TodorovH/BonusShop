@@ -20,9 +20,7 @@ export const Menu = () => {
           {t('deposit')}
         </LinkButton>
       </div>
-      <LoginButton className={`login-btn`} onClick={signIn}>
-        {t('login')}
-      </LoginButton>
+      <LoginButton className={`login-btn`}>{t('login')}</LoginButton>
     </menu>
   );
 };

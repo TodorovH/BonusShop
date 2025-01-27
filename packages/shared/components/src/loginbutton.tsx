@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { signIn } from 'next-auth/react';
 
 export const LoginButton = ({
   children,
@@ -8,11 +9,16 @@ export const LoginButton = ({
   className,
 }: {
   children: React.ReactNode;
-  onClick: Function;
+  onClick?: Function;
   className: string;
 }) => {
   return (
-    <button className={className} onClick={onClick()}>
+    <button
+      className={className}
+      onClick={() => {
+        signIn();
+      }}
+    >
       {children}
     </button>
   );
