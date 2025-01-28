@@ -1,18 +1,17 @@
 import type { NextPage } from 'next';
 import { signIn } from 'next-auth/react';
 import { useTranslations } from 'next-intl';
-import { useState, FormEventHandler } from 'react';
+import { useState, FormEventHandler, JSX } from 'react';
 
-interface Props {}
+// interface Props {}
 
-export const LoginForm: NextPage = (props): JSX.Element => {
+export const LoginForm: NextPage = (): JSX.Element => {
   const t = useTranslations('login-form');
   const [username, setUsername] = useState('');
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
     const res = await signIn('credentials', {
       username: username,
-      redirect: false,
     });
 
     console.log(res);

@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-import { getBonusesData } from '@repo/getBonusesData';
+import { bonuses } from '@repo/getBonusesData';
 import { Bonus } from '@repo/custom-types/bonus';
 
 type Data = {
@@ -11,6 +11,5 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  const data = getBonusesData();
-  res.status(200).json(data);
+  res.status(200).json({ bonuses });
 }

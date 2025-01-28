@@ -1,42 +1,25 @@
 import { createContext, useState, useEffect, useContext } from 'react';
 import type { ContextType } from '@repo/custom-types/contextType';
 
-const contextDefaultValues: ContextType = {
-  users: [],
-  bonuses: [],
-};
+export const DataContext = createContext<ContextType | undefined>(undefined);
 
-export const DataContext = createContext<ContextType>(contextDefaultValues);
-
-export const DataProvider = ({
-  children,
-  initialData,
-}: {
-  children: React.ReactNode;
-  initialData?: unknown;
-}) => {
-  const [data, setData] = useState<ContextType | unknown>(initialData);
+export const DataProvider = ({ children }: { children: React.ReactNode }) => {
+  const [data, setData] = useState<ContextType | undefined>(undefined);
 
   useEffect(() => {
-    if (!initialData) {
-      const allData: ContextType = {
-        users: [],
-        bonuses: [],
-      };
+    if (!data) {
       const fetchData = async () => {
         const usersRes = await fetch('/api/getusers');
-        allData.users = await usersRes.json();
+        const users = await usersRes.json();
         const bonusesRes = await fetch('/api/getbonuses');
-        allData.bonuses = await bonusesRes.json();
-        setData(allData);
+        const bonuses = await bonusesRes.json();
+        setData({ users, bonuses });
       };
       fetchData();
     }
-  }, [initialData]);
+  }, [data]);
 
-  return (
-    <DataContext.Provider value={{ data }}>{children}</DataContext.Provider>
-  );
+  return <DataContext.Provider value={data}>{children}</DataContext.Provider>;
 };
 
 export const useData = () => {

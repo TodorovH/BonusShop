@@ -12,7 +12,7 @@ export const Menu = () => {
         <LinkButton className={`main-nav-btn`} destinationPage="/">
           {t('home')}
         </LinkButton>
-        <LinkButton className={`main-nav-btn`} destinationPage="/bonus">
+        <LinkButton className={`main-nav-btn`} destinationPage="/bonusshop">
           {t('bonusshop')}
         </LinkButton>
         <LinkButton className={`main-nav-btn`} destinationPage="/deposit">

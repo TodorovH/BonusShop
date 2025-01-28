@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { Geist, Geist_Mono } from 'next/font/google';
-import { useTranslations } from 'next-intl';
+// import { useTranslations } from 'next-intl';
 
 import { Header } from '@repo/components/header';
 import { LoginForm } from '@repo/components/login-form';
@@ -26,7 +26,7 @@ export async function getStaticProps({ locale }: Props) {
   return {
     props: {
       locale: locale,
-      messages: (await import(`@shared-locales/${locale}.json`)).default,
+      messages: (await import(`../../../../locales/${locale}.json`)).default,
     },
   };
 }
@@ -56,5 +56,4 @@ export default function Login() {
       </div>
     </>
   );
-  c;
 }

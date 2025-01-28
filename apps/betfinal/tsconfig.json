@@ -20,7 +20,8 @@
         "../../packages/shared/mockups/src/bonusesdata.tsx"
       ],
       "@shared-locales/*": ["../../packages/shared/locales/src/*"],
-      "@i18n": ["../../packages/shared/i18n/i18n.ts"]
+      "@i18n": ["../../packages/shared/i18n/i18n.ts"],
+      "@shared/components": ["../../packages/shared/components/src/*"]
     }
   },
   "include": [

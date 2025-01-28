@@ -10,9 +10,9 @@ export type Bonus = {
     ar: string;
   };
   requiresKYC: boolean;
-  depositCountMin: number;
+  depositCountMin?: number;
   depositCountMax?: number;
   balanceMustBeZero?: boolean;
   registrationWithinLastDays?: number;
-  availableCoutries?: string[];
+  availableCountries?: string[];
 };
