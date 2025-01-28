@@ -1,7 +1,4 @@
 import { createContext, useState, useEffect, useContext } from 'react';
-
-import type { User } from '../../../custom-types/src/user';
-import type { Bonus } from '../../../custom-types/src/bonus';
 import type { ContextType } from '@repo/custom-types/contextType';
 
 const contextDefaultValues: ContextType = {

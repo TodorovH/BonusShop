@@ -1,8 +1,7 @@
 import { useTranslations } from 'next-intl';
 
-import { LinkButton } from '@repo/components/linkbutton';
-import { LoginButton } from '@repo/components/loginbutton';
-import { signIn } from 'next-auth/react';
+import { LinkButton } from './link-button';
+import { LoginButton } from './login-button';
 
 export const Menu = () => {
   const t = useTranslations('common');
