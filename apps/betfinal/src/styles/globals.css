@@ -66,11 +66,12 @@ a {
 }
 
 .login-btn {
-  width: 70px;
+  width: fit-content;
   height: 100%;
   font-size: 1.2rem;
   background: transparent;
   border-width: 0;
+  padding-inline: 5px;
 }
 
 .nav-btn.active {

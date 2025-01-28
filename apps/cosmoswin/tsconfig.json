@@ -14,7 +14,14 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@repo/getUsersData": ["../../packages/shared/mockups/src/usersdata.tsx"],
+      "@repo/getBonusesData": [
+        "../../packages/shared/mockups/src/bonusesdata.tsx"
+      ],
+      "@shared-locales/*": ["../../packages/shared/locales/src/*"],
+      "@i18n": ["../../packages/shared/i18n/i18n.ts"],
+      "@shared/components": ["../../packages/shared/components/src/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

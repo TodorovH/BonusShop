@@ -1,7 +1,6 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import { Geist, Geist_Mono } from 'next/font/google';
-import { useTranslations } from 'next-intl';
+// import { useTranslations } from 'next-intl';
 
 import { Header } from '@repo/components/header';
 import { DepositForm } from '@repo/components/deposit-form';
@@ -27,16 +26,16 @@ export async function getStaticProps({ locale }: Props) {
   return {
     props: {
       locale: locale,
-      messages: (await import(`@shared-locales/${locale}.json`)).default,
+      messages: (await import(`../../../../locales/${locale}.json`)).default,
     },
   };
 }
 
-export default function Login() {
+export default function Deposit() {
   return (
     <>
       <Head>
-        <title>Betfinal | Login</title>
+        <title>Betfinal | Deposit</title>
         <meta
           name="description"
           content="Betfinal Monorepo Application with bonus shop. Login page"
@@ -51,7 +50,7 @@ export default function Login() {
           <h1>BETFINAL</h1>
         </Header>
         <main className={styles.main}>
-          <DepositForm children={null} />
+          <DepositForm />
         </main>
         <Footer className={styles.footer}>2025 Hristo Todorov</Footer>
       </div>

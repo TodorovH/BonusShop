@@ -36,8 +36,6 @@ export const Navbar = ({
     }
     document.querySelector('html')!.dir =
       `${cookieLocale === 'en' ? 'LTR' : 'RTL'}`;
-    const loginBtn = document.querySelector('.login-btn')!;
-    loginBtn.style.width = `${cookieLocale === 'en' ? '70px' : '100px'}`;
   }, [router]);
 
   return (

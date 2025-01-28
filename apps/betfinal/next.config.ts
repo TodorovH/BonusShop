@@ -1,5 +1,12 @@
 import type { NextConfig } from 'next';
 
+const withTM = require('next-transpile-modules')([
+  '@repo/components',
+  '@repo/custom-types',
+  '@repo/mockups',
+  '@repo/utils',
+]);
+
 const nextConfig: NextConfig = {
   i18n: {
     locales: ['en', 'ar'],
@@ -10,7 +17,7 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
 };
 
-export default nextConfig;
+export default withTM(nextConfig);
 
 // export const config = {
 //   matcher: ['/', '/:path*'],
