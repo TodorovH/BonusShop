@@ -7,5 +7,9 @@
     "deposit": "Deposit",
     "en": "EN",
     "ar": "AR"
+  },
+  "login-form": {
+    "username": "Username",
+    "join-us": "JOIN US"
   }
 }

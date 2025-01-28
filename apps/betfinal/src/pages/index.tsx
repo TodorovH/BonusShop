@@ -2,12 +2,12 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { useTranslations } from 'next-intl';
+import { useData } from '@repo/utils/data';
 
 import { Header } from '@repo/components/header';
 import { Footer } from '@repo/components/footer';
 
 import styles from '@/styles/Home.module.css';
-import { useData } from '@repo/utils/data';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -29,6 +29,7 @@ export async function getStaticProps({ locale }: Props) {
       locale: locale,
       messages: (await import(`@shared-locales/${locale}.json`)).default,
     },
+    revalidate: 1,
   };
 }
 

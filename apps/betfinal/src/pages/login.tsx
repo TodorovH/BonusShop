@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import { useTranslations } from 'next-intl';
 
 import { Header } from '@repo/components/header';
+import { LoginForm } from '@repo/components/login-form';
 import { Footer } from '@repo/components/footer';
 
 import styles from '@/styles/Login.module.css';
